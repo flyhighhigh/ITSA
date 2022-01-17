@@ -5,10 +5,6 @@
 #include<string.h>
 #include<ctype.h>
 
-char a[1000];
-char table2[30][30];
-int N,n,m;
-
 int main(){
     
     scanf("%s",a);
@@ -18,7 +14,7 @@ int main(){
     }
 
     char str[4096];
-    char *all[30];
+    char *all[30];// map
     
     int idx=0;
 
@@ -36,10 +32,9 @@ int main(){
     int m=strlen(all[0]);
     for(int i=0;i<idx;i++){
         for(int j=0;j<m;j++){
-            //all[i][j]
+            // 現在看到點 all[i][j]
             //左
-            //printf("%d %d\n",i,j);
-            for(int x=0;x<=strlen(a)&&j-x>=-1;x++){
+            for(int x=0;x<=strlen(a)&&j-x>=-1;x++){// 數了幾個字
                 if (x == strlen(a)) {
                     printf("%d, %d To %d, %d\n", i, j, i, j - (strlen(a) - 1));
                     break;
@@ -113,11 +108,6 @@ int main(){
             
         }
     }
-    /*
-    for(int i=0;i<idx;i++){
-        printf("%s\n",table2[i]);
-    }
-    */
 
 }
 /*

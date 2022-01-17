@@ -5,7 +5,7 @@
 #include<string.h>
 #include<ctype.h>
 
-int a[100][100];
+int a[100][100];// map
 int N,n,m;
 
 int row_correct(int x){
@@ -57,13 +57,13 @@ int main(){
             a[i][j]=c[j-1]-'0';
         }
     }
-    for(int i=1;i<=9;i++){
+    for(int i=1;i<=9;i++){// 檢查row
         if(!row_correct(i))flag=0;
     }
-    for(int i=1;i<=9;i++){
+    for(int i=1;i<=9;i++){// 檢查col
         if(!col_correct(i))flag=0;
     }
-    for(int i=0;i<3;i++){
+    for(int i=0;i<3;i++){// 檢查block
         for(int j=0;j<3;j++){
             if(!block_correct(i,j))flag=0;
         }

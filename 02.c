@@ -5,7 +5,7 @@
 #include<string.h>  
 #include<ctype.h>  
   
-int main(){  
+int main(){// 跟上一題一模一樣 XD
     int a[1000];  
     char str[4096],temp[12];  
     while(fgets(str,4096,stdin)!=NULL){  

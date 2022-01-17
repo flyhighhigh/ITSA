@@ -11,20 +11,19 @@ int N,n,m;
 int main(){
     
     scanf("%d",&N);
-    int max=0;
+    int end=0;// 陣列結尾
     while(N--){
+        scanf("%d%d",&n,&m);// 把該段時間所需的車數+1
         
-        scanf("%d%d",&n,&m);
-        
-        for(int i=n;i<m;i++){
+        for(int i=n;i<m;i++)
             a[i]++;
-        }
-        if(m>max)max=m;
+        
+        if(m>end)end=m;
 
     }
-    int x=0;
+    int max=0;// 所需車數
     for(int i=0;i<max;i++){
-        if(x<a[i])x=a[i];
+        if(max<a[i])max=a[i];
     }
-    printf("%d\n",x);
+    printf("%d\n",max);
 }

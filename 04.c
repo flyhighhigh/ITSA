@@ -5,10 +5,10 @@
 #include<string.h>
 #include<ctype.h>
 
-int a[1000][1000];
+int a[1000][1000];// map
 int N,n,m;
 
-void print(){
+void print(){// 2的點輸出為0 其他為底線
     for(int i=1;i<=n;i++){
         for(int j=1;j<=m;j++){
             if(a[i][j]==2)printf("0 ");
@@ -26,11 +26,13 @@ int main(){
         h++;
         scanf("%d%d",&n,&m);
         
+        // 讀入地圖
         for(int i=1;i<=n;i++){
             for(int j=1;j<=m;j++){
                 scanf("%d",&a[i][j]);
             }
         }
+        // 若看到的點自己是1並且附近有人也是0，則設定為邊緣=2
         for(int i=1;i<=n;i++){
             for(int j=1;j<=m;j++){
                 if(a[i][j]==1){

@@ -13,8 +13,8 @@ int main(){
         while(i<(int)strlen(str)){
             if(isspace(str[i])){i++;continue;}
             sscanf(str+i,"%s",temp);
-            a=atoi(temp);
-            sum+=a*a*a;
+            a=atoi(temp);// 讀入方式同前兩題
+            sum+=a*a*a;// 立方和
             i+=strlen(temp);
         }
         printf("%d\n",sum);
